@@ -1,4 +1,5 @@
-﻿using SmartAppl.Application.Interfaces.Courses;
+﻿using Microsoft.EntityFrameworkCore;
+using SmartAppl.Application.Interfaces.Courses;
 using SmartAppl.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,15 @@ namespace SmartAppl.Infrastructure
         {
             this._dbContext = dbContext;
         }
-        public IEnumerable<Course> GetAllCourses()
+ //       public IEnumerable<Course> GetAllCourses()
+ //       {
+ //           var data = _dbContext.Courses.ToList();
+ //           return data;
+ //       }
+
+        public async Task<IEnumerable<Course>> GetAllCoursesAsync()
         {
-            throw new NotImplementedException();
+            return await _dbContext.Courses.ToListAsync();
         }
     }
 }

@@ -9,7 +9,8 @@ namespace SmartAppl.Application.Interfaces.Courses
 {
     public interface ICourseRepository
     {
-        IEnumerable <Course> GetAllCourses();
+//        IEnumerable <Course> GetAllCourses();
+        Task<IEnumerable<Course>> GetAllCoursesAsync();
         
     }
 }
