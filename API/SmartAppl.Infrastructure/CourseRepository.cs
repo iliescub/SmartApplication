@@ -27,5 +27,10 @@ namespace SmartAppl.Infrastructure
         {
             return await _dbContext.Courses.ToListAsync();
         }
+
+        public async Task<Course?> GetCourseByID(int id)
+        {
+            return await _dbContext.Courses.FindAsync(id);
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace SmartAppl.Application.Interfaces.Courses
     {
 //        IEnumerable <Course> GetAllCourses();
         Task<IEnumerable<Course>> GetAllCoursesAsync();
-        
+        Task<Course?> GetCourseByID(int id);
+
     }
 }
