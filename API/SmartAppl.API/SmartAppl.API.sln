@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36408.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartAppl.API", "SmartAppl.API.csproj", "{C3C66AF4-7F28-451D-95EC-85D289194DF5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{57C2DF34-A782-4EA6-AEE9-BB97A11D0E75} = {57C2DF34-A782-4EA6-AEE9-BB97A11D0E75}
+		{A9142290-5C84-49BA-88A1-90CBEFDF6613} = {A9142290-5C84-49BA-88A1-90CBEFDF6613}
+		{EE2EE397-A248-4940-85BA-34E6F5D58440} = {EE2EE397-A248-4940-85BA-34E6F5D58440}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartAppl.Domain", "..\SmartAppl.Domain\SmartAppl.Domain.csproj", "{EE2EE397-A248-4940-85BA-34E6F5D58440}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartAppl.Application", "..\SmartAppl.Application\SmartAppl.Application.csproj", "{A9142290-5C84-49BA-88A1-90CBEFDF6613}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartAppl.Infrastructure", "..\SmartAppl.Infrastructure\SmartAppl.Infrastructure.csproj", "{57C2DF34-A782-4EA6-AEE9-BB97A11D0E75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3C66AF4-7F28-451D-95EC-85D289194DF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C66AF4-7F28-451D-95EC-85D289194DF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C66AF4-7F28-451D-95EC-85D289194DF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C66AF4-7F28-451D-95EC-85D289194DF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE2EE397-A248-4940-85BA-34E6F5D58440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE2EE397-A248-4940-85BA-34E6F5D58440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE2EE397-A248-4940-85BA-34E6F5D58440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE2EE397-A248-4940-85BA-34E6F5D58440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9142290-5C84-49BA-88A1-90CBEFDF6613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9142290-5C84-49BA-88A1-90CBEFDF6613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9142290-5C84-49BA-88A1-90CBEFDF6613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9142290-5C84-49BA-88A1-90CBEFDF6613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57C2DF34-A782-4EA6-AEE9-BB97A11D0E75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57C2DF34-A782-4EA6-AEE9-BB97A11D0E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57C2DF34-A782-4EA6-AEE9-BB97A11D0E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57C2DF34-A782-4EA6-AEE9-BB97A11D0E75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15455C05-A266-4D75-8708-E70668BAA2E9}
+	EndGlobalSection
+EndGlobal
