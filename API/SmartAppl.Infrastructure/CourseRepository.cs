@@ -32,5 +32,12 @@ namespace SmartAppl.Infrastructure
         {
             return await _dbContext.Courses.FindAsync(id);
         }
+
+        public async Task<IEnumerable<Course>> GetCoursesByIDAsync(IEnumerable<int> ids)
+        {
+            return await _dbContext.Courses
+                .Where(c => ids.Contains(c.CourseId))
+                .ToListAsync();
+        }
     }
 }
