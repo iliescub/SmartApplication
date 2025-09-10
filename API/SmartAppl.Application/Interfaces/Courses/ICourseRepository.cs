@@ -12,7 +12,11 @@ namespace SmartAppl.Application.Interfaces.Courses
 //        IEnumerable <Course> GetAllCourses();
         Task<IEnumerable<Course>> GetAllCoursesAsync();
         Task<Course?> GetCourseByID(int id);
-        Task<IEnumerable<Course>> GetCoursesByIDAsync(IEnumerable<int> ids);
-
+//        Task<IEnumerable<Course>> GetCoursesByIDAsync(IEnumerable<int> ids);
+        Task<Course> AddCourseAsync(Course course);
+        Task<bool> DeleteCourseAsync(int id);
+        Task<bool> IsTitleDuplicatedAsync(string title);
+        Task<Course?> UpdateCourseAsync(Course course);
+        Task<Course?> UpdateDescriptionAsync(Course course, string description);
     }
 }

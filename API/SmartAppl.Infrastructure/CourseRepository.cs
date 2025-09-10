@@ -33,11 +33,59 @@ namespace SmartAppl.Infrastructure
             return await _dbContext.Courses.FindAsync(id);
         }
 
-        public async Task<IEnumerable<Course>> GetCoursesByIDAsync(IEnumerable<int> ids)
+//        public async Task<IEnumerable<Course>> GetCoursesByIDAsync(IEnumerable<int> ids)
+//       {
+//            return await _dbContext.Courses
+//                .Where(c => ids.Contains(c.CourseId))
+ //               .ToListAsync();
+ //       }
+        public async Task<Course> AddCourseAsync(Course course)
         {
-            return await _dbContext.Courses
-                .Where(c => ids.Contains(c.CourseId))
-                .ToListAsync();
+            _dbContext.Courses.Add(course);
+            await _dbContext.SaveChangesAsync();
+            return course;
+        }
+        public async Task<bool> DeleteCourseAsync(int id)
+        {
+            var course = await _dbContext.Courses.FindAsync(id);
+            if (course == null)
+                return false;
+
+            _dbContext.Courses.Remove(course);
+            await _dbContext.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<bool> IsTitleDuplicatedAsync(string title)
+        {
+            return await _dbContext.Courses.AnyAsync(c => c.Title == title);
+        }
+
+        public async Task<Course?> UpdateCourseAsync(Course course)
+        {
+            var existingCourse = await _dbContext.Courses.FindAsync(course.CourseId);
+            if (existingCourse == null)
+                return null;
+
+            existingCourse.Title = course.Title;
+            existingCourse.Description = course.Description;
+            existingCourse.CreatedBy = course.CreatedBy;
+            existingCourse.CreatedOn = course.CreatedOn;
+            // Add other properties as needed
+
+            await _dbContext.SaveChangesAsync();
+            return existingCourse;
+        }
+
+        public async Task<Course?> UpdateDescriptionAsync(Course course, string description)
+        {
+            var _course = await _dbContext.Courses.FindAsync(course.CourseId);
+            if (_course == null)
+                return null;
+
+            _course.Description = description;
+            await _dbContext.SaveChangesAsync();
+            return _course;
         }
     }
 }
